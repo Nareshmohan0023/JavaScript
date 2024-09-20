@@ -1,73 +1,72 @@
-Here's a sample `README.md` file for your repository:
 
-```markdown
-# JavaScript Games and Projects
+# JavaScript Projects
 
-This repository contains three interactive JavaScript-based games built using **HTML**, **CSS**, and **JavaScript (Strict Mode)**. Each project demonstrates key JavaScript concepts like DOM manipulation, event handling, and basic game logic. Explore the projects and learn how they work!
+This repository contains interactive JavaScript-based projects which i used to learn JS built using **HTML**, **CSS**, and **JavaScript (strict mode)**. Each project demonstrates fundamental concepts like DOM manipulation, event handling, and game logic.
 
-## Projects
+## Projects Overview
 
-### 1. Guess My Number
-A number-guessing game where the player tries to guess a random number between 1 and 20. Feedback is given for incorrect guesses, and the player can compete to achieve a high score.
+### 1. **Guess My Number**
+A fun number guessing game where users attempt to guess a random number. The game provides real-time feedback on whether the guess is too high or low and tracks the score and highscore.
 
-- **Features:**
-  - Random number generation
-  - Feedback on guesses (too high, too low)
-  - Score tracking and high score functionality
-  - Play again option
+- **Technologies**: JavaScript, HTML, CSS
+- **Features**:
+  - Random number generation.
+  - Dynamic feedback and user prompts.
+  - Highscore and score tracking.
+  - Play again functionality.
 
-- **Technologies:**
-  - HTML
-  - CSS
-  - JavaScript
+### 2. **Modal**
+A project focused on creating a modal pop-up window with open and close functionality using buttons and keyboard events.
 
-### 2. Modal Window
-A project that focuses on creating a modal window popup. The modal can be opened and closed with smooth animations and showcases handling click events and key press events.
+- **Technologies**: JavaScript, HTML, CSS
+- **Features**:
+  - Modal window toggle (open/close).
+  - Keyboard support (`Escape` key to close modal).
+  - Responsive design for various screen sizes.
 
-- **Features:**
-  - Modal open and close functionality
-  - Smooth transitions
-  - Close modal by clicking outside or pressing the "Escape" key
+### 3. **Pig Game**
+A two-player dice game. Players roll the dice to accumulate points. Rolling a 1 ends the player’s turn, and the first player to reach 100 points wins.
 
-- **Technologies:**
-  - HTML
-  - CSS
-  - JavaScript
+- **Technologies**: JavaScript, HTML, CSS
+- **Features**:
+  - Turn-based gameplay with dynamic score updates.
+  - Dice roll simulation.
+  - Game reset and winner announcement.
+  - Player switching logic and responsive design.
 
-### 3. Pig Game
-A two-player dice game where players take turns rolling a dice. The goal is to reach 100 points first, but beware—rolling a 1 resets the player’s current score!
+## How to Run
 
-- **Features:**
-  - Dice roll simulation
-  - Player turn switching
-  - Win condition (first to 100 points)
-  - Score tracking and hold feature
-
-- **Technologies:**
-  - HTML
-  - CSS
-  - JavaScript
-
-## How to Run the Projects
-
-1. Clone this repository:
+1. **Clone the repository:**
    ```bash
-   git clone https://github.com/your-username/your-repo-name.git
+   git clone https://github.com/your-username/repository-name.git
    ```
-2. Open the project folder of your choice.
-3. Launch `index.html` in a web browser to start the game.
+2. **Navigate to the project directory:**
+   ```bash
+   cd repository-name
+   ```
+3. **Open the projects in your browser:**
+   - `guess-my-number.html`
+   - `modal.html`
+   - `pig-game.html`
 
-## Technologies Used
-- **HTML**: Structuring the game layout.
-- **CSS**: Styling for the user interface.
-- **JavaScript**: Core logic, event handling, and dynamic updates.
+## Preview
 
-## License
-This project is open-source and available under the [MIT License](LICENSE).
+- **Guess My Number:**
+ 
 
----
+- **Modal Project:**
+  
 
-Enjoy exploring and feel free to contribute or suggest improvements!
-```
+- **Pig Game:**
 
-You can customize the descriptions or add specific instructions based on your projects!
+
+## Author
+
+**[Naresh]**  
+*React Front-End Developer | Enthusiastic Learner*  
+Feel free to connect via [nareshmohan0023@gmail.com.com].
+
+
+
+
+
