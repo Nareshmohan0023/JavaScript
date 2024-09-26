@@ -75,11 +75,13 @@ const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
 
 /////////////////////////////////////////////////
 
-const displayMovements = function (movements) {
+const displayMovements = function (movements, sort = false) {
   containerMovements.innerHTML = '';
+  /////sort based true or false/////
+  const movs = sort ? movements.slice().sort((a, b) => a - b) : movements;
 
-  //*css*/
-  movements.forEach(function (mov, i) {
+  //adding movements UI of current user//////
+  movs.forEach(function (mov, i) {
     const type = mov > 0 ? 'deposit' : 'withdrawal';
 
     const html = `<div class="movements__row">
@@ -225,10 +227,15 @@ btnClose.addEventListener('click', function (e) {
     console.log('index value is' + index);
 
     //delete account
-    // accounts.splice(index, 1);
+    accounts.splice(index, 1);
 
     //Hide UI
     containerApp.style.opacity = 0;
   }
   inputCloseUsername.value = inputClosePin.value = '';
+});
+
+btnSort.addEventListener('click', function (e) {
+  e.preventDefault();
+  displayMovements(currentAccount.movements, true);
 });
