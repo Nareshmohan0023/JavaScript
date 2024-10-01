@@ -7,6 +7,9 @@ const modal = document.querySelector('.modal');
 const overlay = document.querySelector('.overlay');
 const btnCloseModal = document.querySelector('.btn--close-modal');
 const btnsOpenModal = document.querySelectorAll('.btn--show-modal');
+const btnScrollTo = document.querySelector('.btn--scroll-to');
+const section1 = document.querySelector('#section--1');
+const nav__links = document.querySelector('.nav__links');
 
 const openModal = function () {
   modal.classList.remove('hidden');
@@ -30,15 +33,12 @@ document.addEventListener('keydown', function (e) {
   }
 });
 
-//smooth scrolling
-
-const btnScrollTo = document.querySelector('.btn--scroll-to');
-const section1 = document.querySelector('#section--1');
+//smooth scrolling for button
 
 btnScrollTo.addEventListener('click', function (e) {
   section1.scrollIntoView({ behavior: 'smooth' });
-  const s1coords = section1.getBoundingClientRect(); // console.log(s1coords);
-  console.log(e.target.getBoundingClientRect()); //gives the viewport size
+  // const s1coords = section1.getBoundingClientRect(); // console.log(s1coords);
+  // console.log(e.target.getBoundingClientRect()); //gives the viewport size
   // console.log("height/width of viewport",document.documentElement.clientHeight,document.documentElement.clientWidth)
   // console.log('offset', window.pageXOffset, window.pageYOffset);
   //scrolling
@@ -46,10 +46,21 @@ btnScrollTo.addEventListener('click', function (e) {
   //   s1coords.left + window.pageXOffset,
   //   s1coords.top + window.pageYOffset
   // );
-
+  //(or)
   // window.scrollTo({
   //   left: s1coords.left + window.pageXOffset,
   //   top: s1coords.top + window.pageYOffset,
   //   behavior: 'smooth', // Smooth scroll
   // });
+});
+
+//smooth scroll to nav links //selcting parent
+nav__links.addEventListener('click', function (e) {
+  e.preventDefault();
+
+  //matching strategy
+  if (e.target.classList.contains('nav__link')) {
+    const id = e.target.getAttribute('href');
+    document.querySelector(id).scrollIntoView({ behavior: 'smooth' });
+  }
 });
