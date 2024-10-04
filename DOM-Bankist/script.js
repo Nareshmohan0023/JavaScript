@@ -109,11 +109,32 @@ nav.addEventListener('mouseover', handHover.bind(0.5));
 nav.addEventListener('mouseout', handHover.bind(1));
 
 //Sticky Navigation
-const intailcoords = section1.getBoundingClientRect();
-console.log(intailcoords);
 
-window.addEventListener('scroll', function (e) {
-  console.log(e);
-  if (this.window.scrollY > intailcoords.top) nav.classList.add('sticky');
+// const intailcoords = section1.getBoundingClientRect();
+// console.log(intailcoords);
+
+// window.addEventListener('scroll', function (e) {
+//   console.log(e);
+//   if (this.window.scrollY > intailcoords.top) nav.classList.add('sticky');
+//   else nav.classList.remove('sticky');
+// });
+
+//sticky navigation using Intersection observer API
+const header = document.querySelector('.header');
+const navheight = nav.getBoundingClientRect().height;
+console.log(navheight);
+
+const stickyNav = function (entries) {
+  const [entry] = entries;
+
+  if (!entry.isIntersecting) nav.classList.add('sticky');
   else nav.classList.remove('sticky');
+};
+
+const headerObserver = new IntersectionObserver(stickyNav, {
+  root: null,
+  threshold: 0,
+  rootMargin: `-${navheight}px`,
 });
+
+headerObserver.observe(header);
