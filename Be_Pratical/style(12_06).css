@@ -1,0 +1,98 @@
+* {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 62.5%;
+}
+body {
+  background-color: #e7f5f5;
+}
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem 5.2rem 2rem 5.2rem;
+  border-bottom: 2px solid #8cb2b0;
+}
+header h1 {
+  color: #586f6e;
+  font-family: cursive;
+}
+.LS {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+.btn {
+  font-size: 2rem;
+  /* border: 1px solid black; */
+}
+.btn:hover {
+  /* font-weight: 500; */
+  text-decoration: underline;
+}
+.hero img {
+  width: 150px;
+  margin: auto;
+  display: block;
+}
+.hero-content {
+  font-size: 4.8rem;
+  text-align: center;
+  margin: auto;
+  width: 800px;
+  font-weight: 600;
+  color: #344342;
+}
+.hero {
+  margin: 9.6rem 0;
+}
+input {
+  accent-color: #465958;
+  transform: scale(1.5);
+  position: relative;
+  top: -3px;
+}
+.quiz {
+  padding: 3.2rem;
+  margin: 8rem 8rem;
+  border: 5px solid #344342;
+  border-radius: 11px;
+}
+.question {
+  font-size: 3.2rem;
+}
+.choice-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+.choice-container > div {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  font-size: 2rem;
+  gap: 10px;
+  position: relative;
+  margin: 10px 10px;
+  border: 2px solid black;
+  border-radius: 11px;
+  padding: 5px 20px;
+}
+.submit {
+  border: 2px solid #586f6e;
+  background-color: #8cb2b0;
+  color: aliceblue;
+  font-size: 3rem;
+  cursor: pointer;
+  border-radius: 50px;
+  margin: 9.6rem auto;
+  padding: 10px 50px;
+  display: block;
+  cursor: pointer;
+}
+.submit:hover {
+  background-color: #465958;
+}

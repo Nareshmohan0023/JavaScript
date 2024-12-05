@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quiz|</title>
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./style(12_06).css" />
+  </head>
+  <body>
+    <header>
+      <h1 class="display-5 fw-bold">QuizHub</h1>
+      <div class="LS">
+        <a class="btn" href="#">Login</a>
+        <a class="btn" href="#">SignUp</a>
+      </div>
+    </header>
+    <div class="hero">
+      <img src="./Assets/quiz_5678058.png" alt="" />
+      <p class="hero-content">
+        Every question you answer brings you closer to mastery. Ready to test
+        your knowledge?
+      </p>
+    </div>
+
+    <script>
+      let quizdata = [
+        {
+          _id: "0",
+          question:
+            "What is the primary purpose of version control in software development?",
+          answers: [
+            "Code execution",
+            "Code testing",
+            "Code collaboration",
+            "Code encryption",
+          ],
+          correctAnswer: "Code collaboration",
+          __v: 0,
+        },
+        {
+          _id: "1",
+          question:
+            "Which programming language is commonly used for server-side web ",
+          answers: ["HTML", "CSS", "JavaScript", "Python"],
+          correctAnswer: "Python",
+          __v: 0,
+        },
+        {
+          _id: "2",
+          question:
+            "What does the 'M' stand for in the 'MVC' architectural pattern",
+          answers: ["Model", "View", "Controller", "Markup"],
+          correctAnswer: "Model",
+          __v: 0,
+        },
+        {
+          _id: "3",
+          question:
+            " Which database type is known for its ability to handle complex relationships and is suitable for graph-based data?",
+          answers: [
+            "Relational Database",
+            "NoSQL Database",
+            "Document Database",
+            "Graph Database",
+          ],
+          correctAnswer: "Graph Database",
+          __v: 0,
+        },
+        {
+          _id: "4",
+          question:
+            "What does the acronym 'HTTP' stand for in the context of web development?",
+          answers: [
+            "Hyperlink Text Transfer Protocol",
+            "Hypertext Transmission Protocol",
+            "Hypertext Transfer Protocol",
+            "Hypertext Text Protocol",
+          ],
+          correctAnswer: "Hypertext Transfer Protocol",
+          __v: 0,
+        },
+        {
+          _id: "5",
+          question:
+            "Which of the following is NOT a commonly used front-end web development framework?",
+          answers: ["Angular", "React", "Django", "Vue.js"],
+          correctAnswer: "Django",
+          __v: 0,
+        },
+      ];
+      document.write(`<div class="quiz_area">
+  <div class="quiz">
+    <p class="question">${quizdata[0].question}</p>
+    <div class="choice-container">
+      <div>
+        <input type="radio" name="choice0"   />
+        <p class="chice">${quizdata[0].answers[0]}</p>
+      </div>
+      <div>
+        <input type="radio" name="choice0"   />
+        <p class="chice">${quizdata[0].answers[1]}</p>
+      </div>
+      <div>
+        <input type="radio" name="choice0"   />
+        <p class="chice">${quizdata[0].answers[2]}</p>
+      </div>
+      <div>
+        <input type="radio" name="choice0"   />
+        <p class="chice">${quizdata[0].answers[3]}</p>
+      </div>
+    </div>
+  </div>
+  <div class="quiz">
+    <p class="question">${quizdata[1].question}</p>
+    <div class="choice-container">
+      <div>
+        <input type="radio" name="choice1"   />
+        <p class="chice">${quizdata[1].answers[0]}</p>
+      </div>
+      <div>
+        <input type="radio" name="choice1"   />
+        <p class="chice">${quizdata[1].answers[1]}</p>
+      </div>
+      <div>
+        <input type="radio" name="choice1"   />
+        <p class="chice">${quizdata[1].answers[2]}</p>
+      </div>
+      <div>
+        <input type="radio" name="choice1"   />
+        <p class="chice">${quizdata[1].answers[3]}</p>
+      </div>
+    </div>
+  </div>
+  <div class="quiz">
+    <p class="question">${quizdata[2].question}</p>
+    <div class="choice-container">
+      <div>
+        <input type="radio" name="choice2"   />
+        <p class="chice">${quizdata[2].answers[0]}</p>
+      </div>
+      <div>
+        <input type="radio" name="choice2"   />
+        <p class="chice">${quizdata[2].answers[1]}</p>
+      </div>
+      <div>
+        <input type="radio" name="choice2"   />
+        <p class="chice">${quizdata[2].answers[2]}</p>
+      </div>
+      <div>
+        <input type="radio" name="choice2"   />
+        <p class="chice">${quizdata[2].answers[3]}</p>
+      </div>
+    </div>
+  </div>
+  <div class="quiz">
+    <p class="question">${quizdata[3].question}</p>
+    <div class="choice-container">
+      <div>
+        <input type="radio" name="choice3"   />
+        <p class="chice">${quizdata[3].answers[0]}</p>
+      </div>
+      <div>
+        <input type="radio" name="choice3"   />
+        <p class="chice">${quizdata[3].answers[1]}</p>
+      </div>
+      <div>
+        <input type="radio" name="choice3"   />
+        <p class="chice">${quizdata[3].answers[2]}</p>
+      </div>
+      <div>
+        <input type="radio" name="choice3"   />
+        <p class="chice">${quizdata[3].answers[3]}</p>
+      </div>
+    </div>
+  </div>
+  <div class="quiz">
+    <p class="question">${quizdata[4].question}</p>
+    <div class="choice-container">
+      <div>
+        <input type="radio" name="choice4"   />
+        <p class="chice">${quizdata[4].answers[0]}</p>
+      </div>
+      <div>
+        <input type="radio" name="choice4"   />
+        <p class="chice">${quizdata[4].answers[1]}</p>
+      </div>
+      <div>
+        <input type="radio" name="choice4"   />
+        <p class="chice">${quizdata[4].answers[2]}</p>
+      </div>
+      <div>
+        <input type="radio" name="choice4"   />
+        <p class="chice">${quizdata[4].answers[3]}</p>
+      </div>
+    </div>
+  </div>
+</div>
+<button class="submit">Submit</button>
+
+      `);
+    </script>
+  </body>
+</html>
