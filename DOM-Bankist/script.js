@@ -265,6 +265,7 @@ const slider = function () {
   dotContainer.addEventListener('click', function (e) {
     if (e.target.classList.contains('dots__dot')) {
       const { slide } = e.target.dataset;
+      console.log(slide);
       goToSlide(slide);
       activateDot(slide);
     }

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Array</title>
+  </head>
+  <body>
+    <h1>Arrays</h1>
+    <p>Press this button to see elements in the array</p>
+    <button class="btn" onclick="add()">Press Me</button>
+    <h2>The elements in the array are:</h2>
+    <p class="array_content"></p>
+    <hr />
+
+    <p class="tables"></p>
+    <script>
+      const content = document.querySelector(".array_content");
+      let arr1 = [];
+      let i = 0;
+
+      function add() {
+        if (arr1.length === 0) {
+          content.innerHTML = `The array is empty. Adding first element.`;
+          i++;
+          arr1.push(i);
+        } else if (arr1.length >= 10) {
+          content.innerHTML = `That's all you can add! The array has reached its limit.`;
+        } else {
+          i++;
+          arr1.push(i);
+          content.innerHTML = `The elements in the array are: ${arr1.join(
+            ", "
+          )}`;
+        }
+      }
+      document.write(`<hr>`);
+
+      let array = [
+        { id: "0", name: "Naresh", age: 21, gender: "male" },
+        { id: "1", name: "Ankit", age: 23, gender: "male" },
+        { id: "2", name: "parth", age: 20, gender: "male" },
+      ];
+      document.write(
+        `<h2>The first object's details is ${Object.values(array[0])}<h2>`
+      );
+      document.write(`<p>${JSON.stringify(array[0])}</p>`);
+
+      document.write(`<h2>The first objects name is ${array[0].name}<h2>`);
+      document.write(
+        `<h2>The first objects age is ${array[0].age}<h2><hr><hr>`
+      );
+      let arr = new Array(1, 2, 3, 4, 5, 6, 7, 8, 9, 10);
+      document.write(
+        `<h2>Here by using array we gonna print the 2 tables</h2>
+        <p>${arr}</p>`
+      );
+
+      for (let i = 0; i < 10; i++) {
+        document.write(`<p>2 x ${arr[i]}=${2 * arr[i]}</p> `);
+      }
+      document.write(`<h2>adding 2 to every elements in array`);
+      for (let i = 0, j = 2; i < 10; i++) {
+        arr[i] += j;
+      }
+      document.write(`<p>The changed array content is ${arr}`);
+    </script>
+  </body>
+</html>
