@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Number Checker</title>
+  </head>
+  <body>
+    <h1>Check if a Number is Positive, Negative, or Zero</h1>
+
+    <label for="numberInput">Enter a number:</label>
+    <input type="number" id="numberInput" />
+    <button onclick="checkNumber()">Check</button>
+
+    <p id="result"></p>
+
+    <hr />
+    <hr />
+    <h1>Check Voting Eligibility</h1>
+
+    <label for="ageInput">Enter your age:</label>
+    <input type="number" id="ageInput" />
+    <button onclick="checkEligibility()">Check</button>
+
+    <p id="result_vote"></p>
+
+    <script>
+      function checkNumber() {
+        const num = document.getElementById("numberInput").value;
+        const result = document.getElementById("result");
+
+        if (num > 0) {
+          result.innerHTML = `The number <strong>${num}</strong> is positive.`;
+        } else if (num < 0) {
+          result.innerHTML = `The number <strong>${num}</strong> is negative.`;
+        } else {
+          result.innerHTML = `The number is zero.`;
+        }
+      }
+
+      function checkEligibility() {
+        const age = document.getElementById("ageInput").value;
+        const result = document.getElementById("result_vote");
+
+        if (age >= 18) {
+          result.innerHTML = `<strong>Congratulations!</strong> You are eligible to vote.`;
+        } else if (age > 0) {
+          result.innerHTML = `You are <strong>not eligible</strong> to vote. You need to wait ${
+            18 - age
+          } more years.`;
+        } else {
+          result.innerHTML = `Please enter a valid age.`;
+        }
+      }
+    </script>
+  </body>
+</html>

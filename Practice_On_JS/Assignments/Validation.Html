@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        display: flex;
+        justify-content: center;
+        flex-direction: row;
+        gap: 150px;
+        align-items: center;
+        height: 100vh;
+        background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+        font-family: Arial, sans-serif;
+      }
+
+      .container {
+        text-align: center;
+        background: white;
+        padding: 20px;
+        border-radius: 12px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        flex: 0.3;
+      }
+      form {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        /* width: 300px; */
+      }
+      input {
+        width: 80%;
+        margin: 10px;
+        padding: 10px;
+      }
+
+      h1 {
+        color: #333;
+      }
+
+      button {
+        background: #ff6f61;
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        font-size: 16px;
+        cursor: pointer;
+        border-radius: 6px;
+        transition: background 0.3s;
+      }
+
+      button:hover {
+        background: #e05241;
+      }
+      .image {
+        width: 80%;
+        height: 50px;
+        display: block;
+      }
+      .validatePannel {
+        background-color: white;
+        border-radius: 13px;
+        color: #333;
+        flex: 0.3;
+        padding: 20px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="validatePannel">
+      <p class="ValidateFirstName">Fname</p>
+      <p class="ValidateLastName">Lname</p>
+      <p class="ValidateRgxMail">Email</p>
+      <p class="ValidateRgxMobile">Mobile</p>
+      <p class="ValidateRgxIp">IP</p>
+      <p class="ValidateRgxDob">D.O.B</p>
+
+      <p class="ValidateRgxUserName">UserName</p>
+      <p class="ValidateRgxPassword">Password</p>
+      <p class="ValidateConfirmPassword">ConfirmPassword</p>
+      <p class="ValidateRgxCaptcha">Captcha</p>
+    </div>
+    <div class="container">
+      <h2>Form Validation</h2>
+      <form action="" onsubmit="SubmitHandler(event)">
+        <input
+          type="text"
+          onkeyup="ValidateFName(event)"
+          placeholder="First Name"
+        />
+        <input
+          type="text"
+          onkeyup="ValidateLName(event)"
+          placeholder="Last Name"
+        />
+        <input type="text" onkeyup="ValidateEmail(event)" placeholder="EMail" />
+        <input
+          type="text"
+          onkeyup="ValidateMobile(event)"
+          placeholder="Ph.no:6322222222"
+        />
+        <input
+          type="text"
+          onkeyup="ValidateIp(event)"
+          placeholder="IP => eg(255.255.255.255)"
+        />
+        <input
+          type="text"
+          onkeyup="ValidateDOB(event)"
+          placeholder="D.O.B => eg(dd-mm-yyyy)"
+        />
+        <input
+          type="text"
+          onkeyup="ValidateUsername(event)"
+          placeholder="New Username"
+        />
+        <input
+          type="text"
+          onkeyup="ValidatePassword(event)"
+          placeholder="New Password "
+        />
+        <input
+          type="text"
+          onkeyup="ValidateConfirmPasscode(event)"
+          placeholder="Confirm Password(Renter Password)"
+        />
+        <img class="image" src="./images.jpg" alt="captcha" />
+        <input
+          type="text"
+          onkeyup="validateCaptcha(event)"
+          placeholder="Enter Captcha"
+        />
+        <button type="submit">Submit</button>
+        <p class="alert"></p>
+      </form>
+    </div>
+    <script src="./validate.js"></script>
+  </body>
+</html>
